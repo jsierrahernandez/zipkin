@@ -75,6 +75,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -101,6 +102,11 @@
           <artifactId>spring-boot-starter-logging</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      <version>3.1.2</version>
     </dependency>
 
     <!-- Override Spring dependency to avoid CVE-2022-25857 -->
