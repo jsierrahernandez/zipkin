@@ -17,6 +17,7 @@ import org.slf4j.bridge.SLF4JBridgeHandler;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import zipkin2.server.internal.EnableZipkinServer;
 import zipkin2.server.internal.ZipkinActuatorImporter;
@@ -40,7 +41,7 @@ import zipkin2.server.internal.banner.ZipkinBanner;
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @EnableZipkinServer
-@EnableEurekaClient
+@EnableDiscoveryClient
 public class ZipkinServer {
   static {
     SLF4JBridgeHandler.removeHandlersForRootLogger();

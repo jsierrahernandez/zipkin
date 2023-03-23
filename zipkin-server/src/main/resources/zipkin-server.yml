@@ -1,18 +1,23 @@
 spring:
   profiles:
     include: shared
-  application:
-    name: ZIPKIN-SERVICE
+#  application:
+#    name: ZIPKIN-SERVICE
 
 armeria:
   enableMetrics: false
 
 eureka:
-  instance:
-    preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://192.168.56.1:8761/eureka
+
+#eureka:
+#  instance:
+#      preferIpAddress: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
 
 
 
